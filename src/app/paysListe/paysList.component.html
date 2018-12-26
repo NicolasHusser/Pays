@@ -1,0 +1,10 @@
+<h2>My Pays</h2>
+<ul class="paysList">
+  <li *ngFor="let pays of paysList"
+    [class.selected]="pays === selectedPays"
+    (click)="onSelect(pays)">
+    <span class="badge">{{pays.id}}</span> {{pays.name}}
+  </li>
+</ul>
+
+<app-pays-detail [pays]="selectedPays"></app-pays-detail>
