@@ -1,11 +1,25 @@
 <div *ngIf="pays">
 
-  <h2>{{pays.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{pays.id}}</div>
+  <h2>{{pays[0].name | uppercase}} Details</h2>
   <div>
     <label>name:
-      <input [(ngModel)]="pays.name" placeholder="name"/>
+      {{pays[0].name}}
     </label>
   </div>
-
+  <div>
+    <label>flag:
+      <img src="{{pays[0].flag}}" />
+    </label>
+  </div>
+  <div>
+    <label>Population:
+      {{pays[0].population}}
+    </label>
+  </div>
+  <div>
+    <label>Capital:
+      {{pays[0].capital}}
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
 </div>

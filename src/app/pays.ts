@@ -1,4 +1,4 @@
 export class Pays {
-  id: number;
+  //numericCode: string;
   name: string;
 }

@@ -1,24 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Pays } from '../pays';
-import { PAYS } from '../mock-paysList';
+import { PaysService } from '../pays.service';
 
 @Component({
   selector: 'app-paysList',
   templateUrl: './paysList.component.html',
   styleUrls: ['./paysList.component.css']
 })
-
 export class PaysComponent implements OnInit {
 
-  paysList = PAYS;
-  selectedPays: Pays;
+  paysList: Pays[] = [];
 
-  constructor() { }
+  constructor(private paysService: PaysService) { }
 
   ngOnInit() {
+
   }
 
-  onSelect(pays: Pays): void {
-    this.selectedPays = pays;
+  getPaysList(): void {
+    this.paysService.getPaysList()
+        .subscribe(paysList => this.paysList = paysList);
+  }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    paysList => this.paysList = paysList;
+      console.log(this.paysList);
+        this.paysList.push({
+          name: name
+        });
+      }
+
+
+  delete(pays: Pays): void {
+    this.paysList = this.paysList.filter(h => h !== pays);
   }
 }
