@@ -68,7 +68,8 @@ updatePays (pays: Pays): Observable<any> {
      // if not search term, return empty hero array.
      return of([]);
    }
-   return this.http.get<Pays[]>(`${this.paysListUrl}/?name=${term}`).pipe(
+   const url = `${this.paysListUrlName}/name/${term}`;
+   return this.http.get<Pays[]>(url).pipe(
      tap(_ => this.log(`found Countries matching "${term}"`)),
      catchError(this.handleError<Pays[]>('searchPayslist', []))
    );
