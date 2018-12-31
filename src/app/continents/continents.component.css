@@ -1,0 +1,48 @@
+/* HeroesComponent's private CSS styles */
+.selected {
+  color: white;
+}
+.continents {
+  margin: 0 0 2em 0;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.continents li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.continents li.selected:hover {
+  color: white;
+}
+.continents li:hover {
+  left: .1em;
+}
+.continents .text {
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+}
+.continents a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}

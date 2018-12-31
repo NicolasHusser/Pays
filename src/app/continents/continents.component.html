@@ -1,0 +1,20 @@
+<h2>My Continents</h2>
+<div>
+  <label>Continent name:
+    <input #ContinentName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(ContinentName.value); ContinentName.value=''">
+    add
+  </button>
+  <button (click)="  getContinents();">
+    initialize List of Continents
+  </button>
+</div>
+<ul class="continents">
+  <li *ngFor="let continent of continents | unique">
+      <a routerLink="/detail/{{continent.region}}">
+     {{continent.region}}
+    </a>
+  </li>
+</ul>

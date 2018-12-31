@@ -32,8 +32,4 @@ export class PaysComponent implements OnInit {
         });
       }
 
-
-  delete(pays: Pays): void {
-    this.paysList = this.paysList.filter(h => h !== pays);
-  }
 }

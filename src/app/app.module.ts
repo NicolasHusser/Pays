@@ -11,6 +11,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 import { CountrySearchComponent } from './country-search/country-search.component';
+import { ContinentsComponent } from './continents/continents.component';
+import { ContinentDetailComponent } from './continent-detail/continent-detail.component';
+import { UniquePipe } from './filter.pipe';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { CountrySearchComponent } from './country-search/country-search.componen
     PaysDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    CountrySearchComponent
+    CountrySearchComponent,
+    ContinentsComponent,
+    ContinentDetailComponent,
+    UniquePipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
