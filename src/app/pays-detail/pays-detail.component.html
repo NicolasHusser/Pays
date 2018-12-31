@@ -1,25 +1,38 @@
 <div *ngIf="pays">
-
+  <div class="container-fluid">
+    <div class="row justify-content-md-center">
   <h2>{{pays[0].name | uppercase}} Details</h2>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-3">
   <div>
     <label>name:
       {{pays[0].name}}
     </label>
   </div>
+  </div>
+  <div class="col-12 col-md-3">
   <div>
     <label>flag:
-      <img src="{{pays[0].flag}}" />
+      <img src="{{pays[0].flag}}" class="img-thumbnail" alt="2000"/>
     </label>
   </div>
+  </div>
+  <div class="col-12 col-md-3">
   <div>
     <label>Population:
       {{pays[0].population}}
     </label>
   </div>
+  </div>
+  <div class="col-12 col-md-3">
   <div>
     <label>Capital:
       {{pays[0].capital}}
     </label>
   </div>
+  </div>
+  </div>
   <button (click)="goBack()">go back</button>
+  </div>
 </div>

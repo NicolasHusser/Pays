@@ -1,4 +1,6 @@
-/* HeroDetailComponent's private CSS styles */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
 label {
   display: inline-block;
   width: 3em;
@@ -28,4 +30,8 @@ button:disabled {
   background-color: #eee;
   color: #ccc;
   cursor: auto;
+}
+img {
+    height: auto;
+    max-width: 366% !important;
 }

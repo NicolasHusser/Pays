@@ -1,4 +1,4 @@
-<h3>Top Heroes</h3>
+<h3>Top Countries</h3>
 <div class="grid grid-pad">
   <a *ngFor="let pays of paysList" class="col-1-4"
       routerLink="/detail/{{pays.name}}">
@@ -8,16 +8,3 @@
   </a>
 </div>
 <app-country-search></app-country-search>
-<div class="btn-group btn-group-toggle">
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
-  </label>
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
-  </label>
-  <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
-  </label>
-</div>
-<hr>
-<pre>{{model | json}}</pre>

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -8,6 +9,7 @@ import { PaysComponent } from './paysListe/paysList.component';
 import { PaysDetailComponent } from './pays-detail/pays-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule }     from './app-routing.module';
 import { CountrySearchComponent } from './country-search/country-search.component';
@@ -30,6 +32,7 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
