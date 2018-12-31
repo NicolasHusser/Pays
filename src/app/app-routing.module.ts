@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:name', component: PaysDetailComponent },
-  { path: 'pays', component: PaysComponent },
+  { path: 'countries', component: PaysComponent },
   { path: 'continent', component: ContinentsComponent },
   { path: 'details/:region', component: ContinentDetailComponent },
   { path: 'contact', component: ContactComponent }
