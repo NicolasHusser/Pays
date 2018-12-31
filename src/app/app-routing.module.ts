@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'detail/:name', component: PaysDetailComponent },
   { path: 'pays', component: PaysComponent },
   { path: 'continent', component: ContinentsComponent },
-  { path: 'detail/:region', component: ContinentsComponent },
+  { path: 'details/:region', component: ContinentDetailComponent },
   { path: 'contact', component: ContactComponent }
 ];
 

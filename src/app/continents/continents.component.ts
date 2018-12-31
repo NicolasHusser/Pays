@@ -33,8 +33,4 @@ export class ContinentsComponent implements OnInit {
         });
       }
 
-
-  delete(continent: Continent): void {
-    this.continents = this.continents.filter(h => h !== continent);
-  }
 }

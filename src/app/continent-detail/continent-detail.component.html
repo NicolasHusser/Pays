@@ -1,3 +1,15 @@
-<p>
-  continent-detail works!
-</p>
+<div *ngIf="continent">
+
+  <h2>{{continent[0].region | uppercase}} Details</h2>
+  <div>
+    <label>countries:
+      <li *ngFor="let country of continent">
+        <a routerLink="/detail/{{country.name}}">
+         {{country.name}}
+        </a>
+    </li>
+    </label>
+  </div>
+
+  <button (click)="goBack()">go back</button>
+</div>

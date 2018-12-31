@@ -28,12 +28,12 @@ export class ContinentService {
 }
 
 
-  getContinent(name): Observable<Continent> {
-    console.log(name);
-    const url = `${this.continentListUrlName}/region/${name}`;
+  getContinent(region): Observable<Continent> {
+    console.log(region);
+    const url = `${this.continentListUrlName}/region/${region}`;
     return this.http.get<Continent>(url).pipe(
-      tap(_ => this.log(`fetched continent region= ${name}`)),
-      catchError(this.handleError<Continent>(`getContinent region=${name}`))
+      tap(_ => this.log(`fetched continent region= ${region}`)),
+      catchError(this.handleError<Continent>(`getContinent region=${region}`))
     );
   }
 
